@@ -1,19 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void bubbleSort(int arr[], int n){
-    bool swapped;
+void insertionSort(int arr[], int n){
+    int key;
     for(int i = 0; i < n-1; i++){
-        swapped = false;
-        for(int j = 0; j < n-1; j++){
-            if(arr[j] > arr[i]){
-                swap(arr[j], arr[j+1]);
-                swapped = true;
-            }
+        key = arr[i];
+        int j = i-1;
+        while(j >= 0 && arr[j] > key){
+            arr[j+1] = arr[j];
+            j--;
         }
-        if(swapped == false){
-            break;
-        }
+        arr[j+1] = key;
     }
 }
 
@@ -28,7 +25,7 @@ int main(){
     for(int i = 0; i<n; i++){
         cout<<arr[i]<<" ";
     }
-    bubbleSort(arr,n);
+    insertionSort(arr,n);
     //Printing after sorting
     for(int i = 0; i<n; i++){
         cout<<arr[i]<<" ";
@@ -42,5 +39,5 @@ int main(){
 // Output - 2 3 4 6 7
 
 
-// Time Complexity - O(N^2) in worst and avg. case
+// Time Complexity - O(N^2) in worst and average case.
 // O(N) in best case
