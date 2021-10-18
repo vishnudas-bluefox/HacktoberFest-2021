@@ -1,9 +1,12 @@
-# Frequency Sort 
+# Frequency of Kth term in string
 
 A java aprogram, given an array of strings words and an integer k, return the k most frequent strings.
 Return the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.
 
  <hr>
+ 
+![Screenshot (736)](https://user-images.githubusercontent.com/54171759/137788780-11657eaa-ceb7-41f9-9417-a8c3dea0b0bc.png)
+
 
 ## Data structures
 ```
